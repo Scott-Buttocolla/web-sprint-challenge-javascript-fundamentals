@@ -31,10 +31,13 @@ console.log(displayNames);
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
-const lowCaseAnimalNames = zooAnimals.map(name => name.animal_name)
+const lowCaseAnimalNames = zooAnimals.map(function(name){
+  let str = name.animal_name;
+  let strs = str.toLowerCase();
+  return strs;
+});
 console.log(lowCaseAnimalNames);
 
-//Need to fix to lowercase all the names, does return list of all animal names
 
 /* Request 3: .filter() 
 
@@ -52,9 +55,9 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 // let populationTotal = 0;
-const populatioTotal = zooAnimals.reduce(function(acc, item){
-  console.log(`I am the accumulator ${acc}`);
-  console.log(`I am the current value ${item.population}`);
+const populationTotal = zooAnimals.reduce(function(acc, item){
+  // console.log(`I am the accumulator ${acc}`);
+  // console.log(`I am the current value ${item.population}`);    these logs are commented out to show that the accumulator and population is working with the reduce method.
   return acc + item.population;
 },0);
 console.log(populationTotal)
