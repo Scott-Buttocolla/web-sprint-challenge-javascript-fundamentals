@@ -25,15 +25,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max) ForEach and map are similar that they take a function in as an argument, where they differ is that map will return a new array with all the items call where forEach will only produce an array with a single item of that array returned.
 
-2. Explain the difference between a callback and a higher order function.
+2. Explain the difference between a callback and a higher order function. 
 
-3. What is closure?
+3. What is closure? Closure is a when a fucntion is enclosed in with its references. It can reach into and out of the function but you can not access it from outside the function.
 
 4. Describe the four rules of the 'this' keyword.
+ 1. Window binding is bad practice. (this) is on the global scope and calls all of javascript. Will return undefined in strict mode
+ 2. implicit binding only applies to objects with methods. It looks to the left of the . to invoke a function 
+ 3. explicit binding will use .call immediatly invokes the function and passes in arguments 1 at a time
+    .apply immediatly invokes the function and passes in an array
+    .bind we pass in the arguments 1 by 1 but does not immediatly invoke the function, instead it returns a brand new function that can be invoked later
+ 4. New binding, Uses the new key word constructs a new object and "this" points to it
+  when a function is invoked as a construstor function using a 'new' object keyword "this" points to the new object thats created.
 
-5. Why do we need super() in an extended class?
+5. Why do we need super() in an extended class?Super allows us to acces and use the parent functions and keys without the use of Object.create in the prototype method. As long as the constructor() was called then super must be called to accept the parent.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
